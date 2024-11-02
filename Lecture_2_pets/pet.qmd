@@ -1,0 +1,56 @@
+---
+title: "Homework Pets"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+Homework Pets in Quarto, see @fig-polar.
+
+
+```{python}
+#| echo: false
+#| classes: tbl-cap
+#| tbl-cap: "Some dataset"
+#| label: fig-polar
+
+#| fig-cap: Histogram of sepal lengths
+#| fig-align: center
+#| code-fold: true
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('/Users/apple/Desktop/archive/seattle_pet_licenses.csv')
+
+print(df)
+
+infor_df = df.info()
+
+print(infor_df)
+
+top_three_ani = df['animal_s_name'].value_counts()
+
+print(top_three_ani)
+
+f, ax = plt.subplots(1, 2, figsize=(20, 7))
+
+cat_names = df[df['species'] == 'Cat']['animal_s_name'].value_counts()
+dog_names = df[df['species'] == 'Dog']['animal_s_name'].value_counts()
+
+c = cat_names[0:5].plot(kind='bar', 
+                         ax=ax[0], 
+                         title='Top Five Cat Names')
+
+d = dog_names[0:5].plot(kind='bar', 
+                         ax=ax[1], 
+                         title='Top Five Dog Names')
+
+c.set_ylabel('Count')
+d.set_ylabel('Count')
+
+plt.show()
+
+
+```
