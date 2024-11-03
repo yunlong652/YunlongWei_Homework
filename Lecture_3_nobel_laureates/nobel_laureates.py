@@ -8,14 +8,14 @@ read_file.to_csv ("nobel.csv",
 	
 #read nobel.csv
 df = pd.DataFrame(pd.read_csv("nobel.csv")) 
-#print(df)
+print(df)
  
 #information for dataset
 infor = df.info()
-#print(infor)
+print(infor)
 
 #???
 
 #Where were most Nobel laureates based when they won their prizes?
 location_most_nobel = df['born_country'].value_counts().head(10) 
-#print(location_most_nobel)
+print(location_most_nobel)
