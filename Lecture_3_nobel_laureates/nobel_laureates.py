@@ -14,8 +14,16 @@ print(df)
 infor = df.info()
 print(infor)
 
-#???
+#new data frame called nobel_living
+nobel_living = df[
+    df['country'].notna() &
+    (df['gender'] != 'org') &
+    df['died_date'].isna()        
+]
+print(nobel_living)
+print(nobel_living.shape[0])
+
 
 #Where were most Nobel laureates based when they won their prizes?
-location_most_nobel = df['born_country'].value_counts().head(10) 
-print(location_most_nobel)
+x,y = df['country'].value_counts().idxmax(), df['country'].value_counts().max()
+print(x,y)
