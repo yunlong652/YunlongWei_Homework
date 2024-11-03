@@ -12,7 +12,7 @@ skim(df)
 sur_counts = df['Survived'].value_counts()
 sur_counts.plot(kind='bar')
 plt.xticks(ticks=[0, 1], labels=['no', 'yes'], rotation = 0)
-plt.show
+plt.show()
 
 gen_sur = df.groupby(['sex', 'Survived']).size().unstack()
 gen_sur.plot(kind='bar', stacked=True)
