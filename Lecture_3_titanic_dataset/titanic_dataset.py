@@ -13,6 +13,23 @@ print(df.head())
 print(df.info())
 print(df.describe()) 
 
+sur_age = df.groupby(['Age', 'Survived']).size().unstack()
+
+# Creating a stacked bar plot
+ax = sur_age.plot(kind='bar', stacked=True, figsize=(10, 6))
+plt.xticks(rotation=0)
+plt.title('Survival by Age', fontsize=16)
+plt.xlabel('Age', fontsize=14)
+plt.ylabel('Count', fontsize=14)
+
+# Adding a legend for better interpretation
+plt.legend(title='Survived', labels=['No', 'Yes'], title_fontsize='13', fontsize='12')
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+
+plt.tight_layout()  # Adjusts plot to make room for labels
+plt.show()
+
+
 # Count the number of survivors and non-survivors
 sur_counts = df['Survived'].value_counts()
 
