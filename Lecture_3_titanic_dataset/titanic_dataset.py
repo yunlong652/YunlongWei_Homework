@@ -25,7 +25,7 @@ plt.ylabel('Count')
 plt.show()
 
 # Group data by gender and survival status, then count occurrences
-gen_sur = df.groupby(['sex', 'Survived']).size().unstack()
+gen_sur = df.groupby(['Sex', 'Survived']).size().unstack()
 
 # Plot the gender survival counts as a stacked bar chart
 gen_sur.plot(kind='bar', stacked=True)
