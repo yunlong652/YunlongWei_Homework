@@ -83,20 +83,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="cell-0" class="cell" data-execution_count="2">
+<div id="cell-0" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span> <span class="op">*</span> np.pi, <span class="dv">2</span> <span class="op">*</span> np.pi, <span class="dv">100</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.sin(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-1" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 
-            <div id="QtlENj"></div>
+            <div id="JHRSVS"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -120,25 +118,93 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("QtlENj").appendChild(div);
+                        document.getElementById("JHRSVS").appendChild(div);
                     };
-                    var e = document.getElementById("QtlENj");
+                    var e = document.getElementById("JHRSVS");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
 </div>
-<div id="cell-1" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ggplot({<span class="st">'x'</span>: x, <span class="st">'y'</span>: y}, aes(<span class="st">'x'</span>, <span class="st">'y'</span>)) <span class="op">+</span> geom_point()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-   <div id="4n2zx8"></div>
+<div id="cell-2" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">2</span> <span class="op">*</span> np.pi, <span class="dv">2</span> <span class="op">*</span> np.pi, <span class="dv">100</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.sin(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-3" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> ggplot({<span class="st">'x'</span>: x, <span class="st">'y'</span>: y}, aes(<span class="st">'x'</span>, <span class="st">'y'</span>)) <span class="op">+</span> geom_point()</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(p)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>plot
+data: {'x': array([-6.28318531, -6.15625227, -6.02931923, -5.9023862 , -5.77545316,
+       -5.64852012, -5.52158709, -5.39465405, -5.26772102, -5.14078798,
+       -5.01385494, -4.88692191, -4.75998887, -4.63305583, -4.5061228 ,
+       -4.37918976, -4.25225672, -4.12532369, -3.99839065, -3.87145761,
+       -3.74452458, -3.61759154, -3.4906585 , -3.36372547, -3.23679243,
+       -3.10985939, -2.98292636, -2.85599332, -2.72906028, -2.60212725,
+       -2.47519421, -2.34826118, -2.22132814, -2.0943951 , -1.96746207,
+       -1.84052903, -1.71359599, -1.58666296, -1.45972992, -1.33279688,
+       -1.20586385, -1.07893081, -0.95199777, -0.82506474, -0.6981317 ,
+       -0.57119866, -0.44426563, -0.31733259, -0.19039955, -0.06346652,
+        0.06346652,  0.19039955,  0.31733259,  0.44426563,  0.57119866,
+        0.6981317 ,  0.82506474,  0.95199777,  1.07893081,  1.20586385,
+        1.33279688,  1.45972992,  1.58666296,  1.71359599,  1.84052903,
+        1.96746207,  2.0943951 ,  2.22132814,  2.34826118,  2.47519421,
+        2.60212725,  2.72906028,  2.85599332,  2.98292636,  3.10985939,
+        3.23679243,  3.36372547,  3.4906585 ,  3.61759154,  3.74452458,
+        3.87145761,  3.99839065,  4.12532369,  4.25225672,  4.37918976,
+        4.5061228 ,  4.63305583,  4.75998887,  4.88692191,  5.01385494,
+        5.14078798,  5.26772102,  5.39465405,  5.52158709,  5.64852012,
+        5.77545316,  5.9023862 ,  6.02931923,  6.15625227,  6.28318531]), 'y': array([ 2.44929360e-16,  1.26592454e-01,  2.51147987e-01,  3.71662456e-01,
+        4.86196736e-01,  5.92907929e-01,  6.90079011e-01,  7.76146464e-01,
+        8.49725430e-01,  9.09631995e-01,  9.54902241e-01,  9.84807753e-01,
+        9.98867339e-01,  9.96854776e-01,  9.78802446e-01,  9.45000819e-01,
+        8.95993774e-01,  8.32569855e-01,  7.55749574e-01,  6.66769001e-01,
+        5.67059864e-01,  4.58226522e-01,  3.42020143e-01,  2.20310533e-01,
+        9.50560433e-02, -3.17279335e-02, -1.58001396e-01, -2.81732557e-01,
+       -4.00930535e-01, -5.13677392e-01, -6.18158986e-01, -7.12694171e-01,
+       -7.95761841e-01, -8.66025404e-01, -9.22354294e-01, -9.63842159e-01,
+       -9.89821442e-01, -9.99874128e-01, -9.93838464e-01, -9.71811568e-01,
+       -9.34147860e-01, -8.81453363e-01, -8.14575952e-01, -7.34591709e-01,
+       -6.42787610e-01, -5.40640817e-01, -4.29794912e-01, -3.12033446e-01,
+       -1.89251244e-01, -6.34239197e-02,  6.34239197e-02,  1.89251244e-01,
+        3.12033446e-01,  4.29794912e-01,  5.40640817e-01,  6.42787610e-01,
+        7.34591709e-01,  8.14575952e-01,  8.81453363e-01,  9.34147860e-01,
+        9.71811568e-01,  9.93838464e-01,  9.99874128e-01,  9.89821442e-01,
+        9.63842159e-01,  9.22354294e-01,  8.66025404e-01,  7.95761841e-01,
+        7.12694171e-01,  6.18158986e-01,  5.13677392e-01,  4.00930535e-01,
+        2.81732557e-01,  1.58001396e-01,  3.17279335e-02, -9.50560433e-02,
+       -2.20310533e-01, -3.42020143e-01, -4.58226522e-01, -5.67059864e-01,
+       -6.66769001e-01, -7.55749574e-01, -8.32569855e-01, -8.95993774e-01,
+       -9.45000819e-01, -9.78802446e-01, -9.96854776e-01, -9.98867339e-01,
+       -9.84807753e-01, -9.54902241e-01, -9.09631995e-01, -8.49725430e-01,
+       -7.76146464e-01, -6.90079011e-01, -5.92907929e-01, -4.86196736e-01,
+       -3.71662456e-01, -2.51147987e-01, -1.26592454e-01, -2.44929360e-16])}
+mapping: {
+  "x": "x",
+  "y": "y"
+}
+data_meta: {'series_annotations': [{'type': 'float', 'column': 'x'}, {'type': 'float', 'column': 'y'}]}
+scales [0]
+layers [1]
+{
+  "geom": "point",
+  "mapping": {},
+  "data_meta": {}
+}
+----------------------------------
+metainfo_list [0]
+</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+   <div id="ojNB1t"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("4n2zx8");
+   var containerDiv = document.getElementById("ojNB1t");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -180,7 +246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 }],
 "metainfo_list":[],
-"spec_id":"2"
+"spec_id":"1"
 };
                window.letsPlotCall(function() {
        
