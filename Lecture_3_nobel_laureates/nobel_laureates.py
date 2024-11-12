@@ -8,7 +8,7 @@ read_file.to_csv ("nobel.csv",
 	
 #read nobel.csv
 df = pd.DataFrame(pd.read_csv("nobel.csv")) 
-print(df)
+#print(df)
  
 #information for dataset
 infor = df.info()
