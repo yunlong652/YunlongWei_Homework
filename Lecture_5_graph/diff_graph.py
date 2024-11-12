@@ -78,3 +78,21 @@ ggplot(df, aes(x='coastal_pop', y='plastic_waste_per_cap')) + \
     geom_point(alpha=0.7) + \
     labs(x='Coastal Population', y='Plastic Waste per Capita (kg)', title='Relationship between Plastic Waste per Capita and Coastal Population') + \
     theme_minimal()
+
+
+#Recreate the following plot, and interpret what you see in context of the data.
+
+df['plastic_waste_per_cap'] = pd.to_numeric(df['plastic_waste_per_cap'], errors='coerce')
+df['total_pop'] = pd.to_numeric(df['total_pop'], errors='coerce')
+df['coastal_pop'] = pd.to_numeric(df['coastal_pop'], errors='coerce')
+df.dropna(subset=['plastic_waste_per_cap', 'total_pop', 'coastal_pop'], inplace=True)
+
+# Calculate coastal population proportion
+df['coastal_pop_prop'] = df['coastal_pop'] / df['total_pop']
+
+p = ggplot(df, aes(x='coastal_pop_prop', y='plastic_waste_per_cap', color='continent')) + \
+    geom_point(alpha=0.7) + \
+    geom_smooth(method='loess', se=True, color='black') + \
+    labs(x='Coastal population proportion (Coastal / total population)', y='Plastic waste per capita', title='Plastic waste vs. coastal population proportion by continent') + \
+    theme_minimal() + \
+    scale_color_discrete(name='Continent')
