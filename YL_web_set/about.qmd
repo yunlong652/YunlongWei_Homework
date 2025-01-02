@@ -5,7 +5,7 @@ title: ""
 ::: {.content-block .about-section}
 # Hi, I'm Wei Yunlong!
 
-![](/Users/apple/Documents/GitHub/YunlongWei_Homework/YL_web_set/images/IMG_0913.JPG)
+![](/images/IMG_0913.jpg)
 
 I'm a graduate student studying Education Management. XXXX
 
