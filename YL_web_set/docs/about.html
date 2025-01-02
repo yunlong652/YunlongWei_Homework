@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -31,10 +31,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-72d5d2b44bfddbcb81d6511eeb186058.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/YANGFAN5203/super-duper-dollop/blob/main/code-basics.ipynb"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/yunlong652/YunlongWei_Homework/blob/main/code-basics.ipynb"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -106,41 +106,33 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
 
 
-<section id="hi-im-yang-fan" class="level1 content-block about-section">
-<h1>Hi, I’m Yang Fan!</h1>
-<p><img src="images/profile.jpg" class="img-fluid"></p>
-<p>I’m a graduate student studying Education Management. I’m from Sichuan province, which locates in the southwest of China. The reason why I choose this major is because I’m an English teacher working in a Chinese college. And my undergraduate major is English Translation.</p>
-<p>I love English and also love to be a teacher.</p>
+<section id="hi-im-wei-yunlong" class="level1 content-block about-section">
+<h1>Hi, I’m Wei Yunlong!</h1>
+<p><img src="./Users/apple/Documents/GitHub/YunlongWei_Homework/YL_web_set/images/IMG_0913.JPG" class="img-fluid"></p>
+<p>I’m a graduate student studying Education Management. XXXX</p>
+<p>XXXXX</p>
 </section>
 <section id="education-experience" class="level2 content-block">
 <h2 class="anchored" data-anchor-id="education-experience">Education Experience</h2>
-<p>During my undergraduate years, I studied in the English Translation major, embarking on a journey of in-depth exploration of knowledge.</p>
-<p>The curriculum was diverse and elaborate. From basic English-Chinese and Chinese-English translation courses that strengthened my skills in text conversion to consecutive interpretation and simultaneous interpretation courses which challenged me to achieve instant language transformation, I made solid progress every step of the way.</p>
-<p>In terms of academic practice, I actively participated in various projects. I once joined the translation volunteer team for an international academic conference organized by our school and was responsible for consecutive interpretation during expert lectures.</p>
-<p>Thanks to professional training, I have mastered translation software like Trados proficiently, which empowers me to carry out efficient and high-quality translation work. This learning experience has shaped me into a professional with solid skills nowadays.</p>
+<p>During my undergraduate years, XXXX</p>
 </section>
 <section id="work-experience" class="level2 content-block">
 <h2 class="anchored" data-anchor-id="work-experience">Work Experience</h2>
-<p>I have been working as a college English teacher since 2021. In daily teaching, I tailored courses for students of different grades:</p>
-<ul>
-<li>For freshmen, I focused on laying a solid foundation</li>
-<li>For sophomores and juniors, I organized various activities to boost their advanced skills</li>
-</ul>
-<p>Outside the classroom, I engaged in teaching research projects like “[Project Name]” and guided students to success in English competitions, enhancing the campus English learning atmosphere.</p>
+<p>I have been working as XXXX</p>
 </section>
 <section id="hobbies-fun-facts" class="level2 content-block">
 <h2 class="anchored" data-anchor-id="hobbies-fun-facts">Hobbies &amp; Fun Facts</h2>
 <p>My interests and hobbies include:</p>
 <ul>
-<li>Language learning and exploring foreign cultures and civilizations</li>
-<li>Watching movies and TV dramas, especially suspense films and detective dramas</li>
-<li>Reading various types of books, with Agatha Christie being my favorite author</li>
-<li>Traveling with friends during holidays for relaxation</li>
+<li>XXX</li>
+<li>XXX</li>
+<li>XXX</li>
+<li>XXX</li>
 </ul>
 </section>
 
@@ -229,6 +221,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -339,6 +333,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

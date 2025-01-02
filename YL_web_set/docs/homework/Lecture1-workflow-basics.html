@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -65,10 +65,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-72d5d2b44bfddbcb81d6511eeb186058.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -126,7 +126,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/YANGFAN5203/super-duper-dollop/blob/main/code-basics.ipynb"> <i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/yunlong652/YunlongWei_Homework/blob/main/code-basics.ipynb"> <i class="bi bi-github" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -143,7 +143,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
 
@@ -368,7 +368,7 @@ Inverse:
 </pre>
 </div>
 </div>
-<p><code>kbytaasrctaj Exercise Write a code block that imports the **numpy** function `numpy.linalg.det()` as `det()`. Run `inspect()` on it. Find the determinant of `[[4, 3], [1, 7]]`.</code></p>
+<p><code>ffvefgrnggbf Exercise Write a code block that imports the **numpy** function `numpy.linalg.det()` as `det()`. Run `inspect()` on it. Find the determinant of `[[4, 3], [1, 7]]`.</code></p>
 <section id="modules" class="level3">
 <h3 class="anchored" data-anchor-id="modules">Modules</h3>
 <p>Sometimes, you will want to call in some code from a different script that <em>you</em> wrote (rather than from a package provided by someone else). Imagine you have several scripts with code in, a, b, and c, all of which need to use the same underlying function that you have written. What do you do? (Note that “script with code in” is just a text file that has a <code>.py</code> extension and contains code.)</p>
@@ -503,7 +503,7 @@ Cell <span class="ansi-green-fg ansi-bold">In[8], line 1</span>
 <p>It will return <code>Script has run</code> because, by executing the script alone, we are asking for anything in the <code>main</code> block defined at the end of the file to be run. But we can still import anything from utilities into other scripts as before–and in that case it is not the main script, but an import, and so the <code>main</code> block will <em>not</em> be executed by default.</p>
 <p>You can important several functions at once from a module (aka another script file) like this:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> utilities <span class="im">import</span> really_useful_func, default_func</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>kbytaasrctaj Exercise Write your own `utilities.py` that has a `super_useful_func` that accepts a number and returns the number divided by 10. In another script, `main.py`, try a) importing all of utilities and running `super_useful_func` on a number and, b), importing just `super_useful_func` from utilities and running it on a number.</code></p>
+<p><code>ffvefgrnggbf Exercise Write your own `utilities.py` that has a `super_useful_func` that accepts a number and returns the number divided by 10. In another script, `main.py`, try a) importing all of utilities and running `super_useful_func` on a number and, b), importing just `super_useful_func` from utilities and running it on a number.</code></p>
 </section>
 </section>
 <section id="reading-and-writing-files" class="level2">
@@ -611,6 +611,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -721,6 +723,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
