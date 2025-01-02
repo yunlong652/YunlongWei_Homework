@@ -2,8 +2,8 @@
 
 # website settings
 website:
-  title: "Gandalf"                                # Your name
-  description: "Gandalf is a renowned wizard and scholar of Middle-earth"   # A brief slogan (optional)
+  title: "Yunlong Wei"                                # Your name
+  description: "Yunlong Wei"   # A brief slogan (optional)
   image: img/my_image.jpg
   
   favicon: img/favicon.png
