@@ -7,32 +7,30 @@ title: ""
 
 ![](/images/IMG_0913.jpg)
 
-I'm a graduate student studying Education Management. XXXX
-
-XXXXX
+I am currently a graduate student in the field of Educational Management, focusing on the study of organizational and improvement strategies within educational systems. My interests lie in educational policy, leadership development, curriculum design, and data-driven decision-making.
 :::
 
 ::: {.content-block}
-## Education Experience
+## Professional Skills
 
-During my undergraduate years, XXXX
+- Policy Analysis: I am adept at assessing the impact of educational policies on student outcomes and proposing effective policy implementations.
+- Leadership Development: I am engaged in learning how to become an influential educational leader and how leadership styles can affect school climate and performance.
+- Curriculum Development: I have in-depth knowledge of curriculum design, especially in integrating technology to meet the needs of diverse student populations.
+- Data Analysis: I am proficient in using data analysis to guide educational decisions, optimize teaching methods, and enhance learning outcomes.
+:::
+
+::: {.content-block}
+## Career Objectives
+
+My goal is to become an educational leader who can apply my knowledge and skills to improve the educational system, enhance the quality of education, and create a more equitable learning environment for all students.
 
 :::
 
 ::: {.content-block}
-## Work Experience
+## Research Interests
 
-I have been working as XXXX
-:::
-
-::: {.content-block}
-## Hobbies & Fun Facts
-
-My interests and hobbies include:
-
-- XXX
-- XXX
-- XXX
-- XXX
+- Educational Equity: I am committed to exploring how management practices can reduce educational disparities and ensure equal educational opportunities for all students.
+- Technology Applications: I am passionate about the application of emerging technologies in the field of education, particularly in online learning and virtual classrooms.
+- Assessment and Measurement: I am keen on learning how to evaluate the effectiveness of educational programs and policies, as well as how to accurately measure student progress.
 
 :::
