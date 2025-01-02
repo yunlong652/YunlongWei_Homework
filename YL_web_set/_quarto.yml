@@ -3,14 +3,14 @@ project:
   output-dir: docs
 
 execute:
-  eval: false          # 禁止执行代码
-  enabled: false       # 完全禁用执行功能
-  freeze: true         # 冻结计算结果
-  error: false         # 不显示错误
-  warning: false       # 不显示警告
-  echo: true          # 显示代码
-  include: true       # 包含代码块
-  cache: false        # 禁用缓存
+  eval: false          
+  enabled: false       
+  freeze: true         
+  error: false         
+  warning: false       
+  echo: true          
+  include: true       
+  cache: false        
 
 website:
   title: ""
@@ -37,4 +37,4 @@ format:
     theme: 
       light: [cosmo, styles/custom.scss]
     css: styles/index.css
-    toc: false         # 禁用目录
+    toc: false         
